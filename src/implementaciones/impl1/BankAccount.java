@@ -6,7 +6,7 @@ public class BankAccount extends Observable {
 
     public void addAmount(Double amount) {
         this.balance += amount;
-        notifyObservers(balance);
+        this.notifyObservers(balance);
     }
 
     public Double getBalance() {

@@ -10,17 +10,17 @@ public class BankExpense implements Observer {
         this.rateCoefficient = rateCoefficient;
     }
 
-    @Override
-    public void update(Object value) {
-        this.totalCalculated = ((Double) value) * rateCoefficient;
-    }
-
     public Double getTotalCalculated() {
         return totalCalculated;
     }
 
     public String getType() {
         return type;
+    }
+
+    @Override
+    public void update(Object value) {
+        this.totalCalculated = ((Double) value) * rateCoefficient;
     }
 
     @Override
